@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "LTxAuthorizationSippr"
-    s.version      = "0.0.2"
+    s.version      = "0.0.3"
     s.summary      = "授权定制功能. "
     s.license      = "MIT"
     s.author             = { "liangtong" => "liangtongdev@163.com" }
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
     s.source       = { :git => "https://github.com/liangtongdev/LTxAuthorization.git", :tag => "#{s.version}", :submodules => true }
     
     s.dependency "LTxAuthorizationUI"
-    
+    s.dependency "LTxEepMSippr"
     
     s.frameworks = "Foundation", "UIKit"
     

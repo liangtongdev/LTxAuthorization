@@ -6,7 +6,7 @@
 //
 
 #import <LTxCore/LTxCore.h>
-
+#import "LTxAuthorizationUI.h"
 /**
  * 修改密码
  * --------------------

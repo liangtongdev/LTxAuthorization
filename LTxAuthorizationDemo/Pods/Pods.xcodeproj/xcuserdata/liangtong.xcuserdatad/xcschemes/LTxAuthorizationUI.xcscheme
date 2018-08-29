@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "67DE41B0FB91409B3EFBD8BBA12ECD79"
+               BlueprintIdentifier = "FF256FBB35A7490C7EA847B5AB628506"
                BlueprintName = "LTxAuthorizationUI"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "LTxAuthorizationUI.framework">

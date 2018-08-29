@@ -6,6 +6,7 @@
 //
 
 #import <LTxCore/LTxCore.h>
+#import "LTxAuthorizationUI.h"
 /**
  * 登录界面
  * 纯代码工作
@@ -20,5 +21,11 @@
  * 可重写该方法
  **/
 -(void)ltx_userLoginWithName:(NSString*)loginName password:(NSString*)password;
+
+/**
+ * 短信验证页面
+ **/
+-(void)ltx_showSmsValidateWithType:(LTxLoginSMSValidateType)smsType;
+
 
 @end

@@ -1,7 +1,7 @@
 {
   "name": "LTxAuthorizationSippr",
-  "version": "0.0.1",
-  "summary": "通用用户登录页面（功能）.",
+  "version": "0.0.2",
+  "summary": "授权定制功能.",
   "license": "MIT",
   "authors": {
     "liangtong": "liangtongdev@163.com"
@@ -12,11 +12,14 @@
   },
   "source": {
     "git": "https://github.com/liangtongdev/LTxAuthorization.git",
-    "tag": "0.0.1",
+    "tag": "0.0.2",
     "submodules": true
   },
   "dependencies": {
     "LTxAuthorizationUI": [
+
+    ],
+    "LTxEepMSippr": [
 
     ]
   },

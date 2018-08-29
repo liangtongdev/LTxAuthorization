@@ -5,7 +5,7 @@
 //  Created by liangtong on 2018/8/27.
 //
 
-#import "LTxAuthorizationUI.h"
+#import "LTxLoginViewController.h"
 
 @interface LTxLoginViewController ()<UITextFieldDelegate>
 
@@ -114,11 +114,7 @@
  **/
 -(void)ltx_forgetPasswordAction{
     [self ltx_hideKeyboard];
-    LTxLoginSmsValidateViewController* smsValidateVC = [[LTxLoginSmsValidateViewController alloc] init];
-    smsValidateVC.smsType = LTxLoginSMSValidateTypeForgetPassword;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.navigationController pushViewController:smsValidateVC animated:YES];
-    });
+    [self ltx_showSmsValidateWithType:LTxLoginSMSValidateTypeForgetPassword];
 }
 
 /**
@@ -126,8 +122,15 @@
  **/
 -(void)ltx_quickLoginAction{
     [self ltx_hideKeyboard];
+    [self ltx_showSmsValidateWithType:LTxLoginSMSValidateTypeQuickLogin];
+}
+
+/**
+ * 短信验证页面
+ **/
+-(void)ltx_showSmsValidateWithType:(LTxLoginSMSValidateType)smsType{
     LTxLoginSmsValidateViewController* smsValidateVC = [[LTxLoginSmsValidateViewController alloc] init];
-    smsValidateVC.smsType = LTxLoginSMSValidateTypeQuickLogin;
+    smsValidateVC.smsType = smsType;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.navigationController pushViewController:smsValidateVC animated:YES];
     });
@@ -362,7 +365,7 @@
 
 //验证输入格式是否合法
 -(BOOL)validateInputData{
-    if (self.userNameTF.text == nil || [[self.userNameTF.text ltx_trimmingWhitespace] isEqualToString:@""] || self.passwordTF.text == nil || [[self.passwordTF.text ltx_trimmingWhitespace] isEqualToString:@""]) {
+    if ( [[self.userNameTF.text ltx_trimmingWhitespace] isEqualToString:@""] || [[self.passwordTF.text ltx_trimmingWhitespace] isEqualToString:@""]) {
         return false;
     }
     return true;

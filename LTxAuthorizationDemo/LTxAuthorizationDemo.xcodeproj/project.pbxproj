@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		272BE08121362F870090FDD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 272BE08021362F870090FDD5 /* AppDelegate.m */; };
-		272BE08421362F870090FDD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272BE08321362F870090FDD5 /* ViewController.m */; };
 		272BE08721362F870090FDD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272BE08521362F870090FDD5 /* Main.storyboard */; };
 		272BE08921362F880090FDD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 272BE08821362F880090FDD5 /* Assets.xcassets */; };
 		272BE08C21362F880090FDD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272BE08A21362F880090FDD5 /* LaunchScreen.storyboard */; };
 		272BE08F21362F880090FDD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 272BE08E21362F880090FDD5 /* main.m */; };
 		272BE0972136301B0090FDD5 /* LT.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 272BE0952136301B0090FDD5 /* LT.bundle */; };
 		272BE0982136301B0090FDD5 /* LTxCoreConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 272BE0962136301B0090FDD5 /* LTxCoreConfig.plist */; };
+		272BE09B2136368C0090FDD5 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 272BE09A2136368C0090FDD5 /* DemoTableViewController.m */; };
 		3FEFD09810216496CE9ED351 /* Pods_LTxAuthorizationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0488036012746D8464CAFEB /* Pods_LTxAuthorizationDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,8 +22,6 @@
 		272BE07C21362F870090FDD5 /* LTxAuthorizationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTxAuthorizationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		272BE07F21362F870090FDD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		272BE08021362F870090FDD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		272BE08221362F870090FDD5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		272BE08321362F870090FDD5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		272BE08621362F870090FDD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		272BE08821362F880090FDD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		272BE08B21362F880090FDD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +29,8 @@
 		272BE08E21362F880090FDD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		272BE0952136301B0090FDD5 /* LT.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LT.bundle; sourceTree = "<group>"; };
 		272BE0962136301B0090FDD5 /* LTxCoreConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LTxCoreConfig.plist; sourceTree = "<group>"; };
+		272BE0992136368C0090FDD5 /* DemoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
+		272BE09A2136368C0090FDD5 /* DemoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
 		ED3FB1ADD7F7087EC662C54E /* Pods-LTxAuthorizationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTxAuthorizationDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTxAuthorizationDemo/Pods-LTxAuthorizationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F0488036012746D8464CAFEB /* Pods_LTxAuthorizationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTxAuthorizationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95B82961507FCF5334A70EA /* Pods-LTxAuthorizationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTxAuthorizationDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTxAuthorizationDemo/Pods-LTxAuthorizationDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,8 +82,8 @@
 				272BE0962136301B0090FDD5 /* LTxCoreConfig.plist */,
 				272BE07F21362F870090FDD5 /* AppDelegate.h */,
 				272BE08021362F870090FDD5 /* AppDelegate.m */,
-				272BE08221362F870090FDD5 /* ViewController.h */,
-				272BE08321362F870090FDD5 /* ViewController.m */,
+				272BE0992136368C0090FDD5 /* DemoTableViewController.h */,
+				272BE09A2136368C0090FDD5 /* DemoTableViewController.m */,
 				272BE08521362F870090FDD5 /* Main.storyboard */,
 				272BE08821362F880090FDD5 /* Assets.xcassets */,
 				272BE08A21362F880090FDD5 /* LaunchScreen.storyboard */,
@@ -185,6 +185,8 @@
 				"${BUILT_PRODUCTS_DIR}/LTxAuthorizationUI/LTxAuthorizationUI.framework",
 				"${BUILT_PRODUCTS_DIR}/LTxCategories/LTxCategories.framework",
 				"${BUILT_PRODUCTS_DIR}/LTxCore/LTxCore.framework",
+				"${BUILT_PRODUCTS_DIR}/LTxEepMSippr/LTxEepMSippr.framework",
+				"${BUILT_PRODUCTS_DIR}/LTxPopup/LTxPopup.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 			);
@@ -197,6 +199,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTxAuthorizationUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTxCategories.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTxCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTxEepMSippr.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTxPopup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 			);
@@ -230,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272BE08421362F870090FDD5 /* ViewController.m in Sources */,
+				272BE09B2136368C0090FDD5 /* DemoTableViewController.m in Sources */,
 				272BE08F21362F880090FDD5 /* main.m in Sources */,
 				272BE08121362F870090FDD5 /* AppDelegate.m in Sources */,
 			);

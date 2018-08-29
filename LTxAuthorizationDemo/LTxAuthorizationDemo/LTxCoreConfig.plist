@@ -5,9 +5,9 @@
 	<key>type</key>
 	<string>debug</string>
 	<key>appId</key>
-	<string>ebe2ea6b-5974-46d8-b3e2-5e9808889aad</string>
+	<string>4f424ed4-b0f1-4af7-9567-aef6cd23d01a</string>
 	<key>pushId</key>
-	<string>726566836973cbcd74c5ed54</string>
+	<string>4304e208ddae484a1a29b1fd</string>
 	<key>pageSize</key>
 	<integer>20</integer>
 	<key>instalTip</key>
@@ -24,7 +24,7 @@
 	<key>debug</key>
 	<dict>
 		<key>host</key>
-		<string>http://192.168.1.90:4680/</string>
+		<string>http://125.46.29.147:8852/eepj-base-login</string>
 		<key>instalUrl</key>
 		<string>http://192.168.1.75:8801/eepm/zj</string>
 	</dict>

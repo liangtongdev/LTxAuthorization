@@ -5,7 +5,7 @@
 //  Created by liangtong on 2018/8/28.
 //
 
-#import "LTxAuthorizationUI.h"
+#import "LTxLoginChangePasswordViewController.h"
 
 @interface LTxLoginChangePasswordViewController ()<UITextFieldDelegate>
 @property (nonatomic, strong) UIView* topView;

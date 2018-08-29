@@ -150,6 +150,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/LTxAuthorizationUI/LTxAuthorizationUI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LTxCategories/LTxCategories.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LTxCore/LTxCore.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LTxEepMSippr/LTxEepMSippr.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LTxPopup/LTxPopup.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
 fi
@@ -161,6 +163,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/LTxAuthorizationUI/LTxAuthorizationUI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LTxCategories/LTxCategories.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LTxCore/LTxCore.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LTxEepMSippr/LTxEepMSippr.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LTxPopup/LTxPopup.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
 fi

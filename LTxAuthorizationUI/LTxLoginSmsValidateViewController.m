@@ -5,7 +5,7 @@
 //  Created by liangtong on 2018/8/28.
 //
 
-#import "LTxAuthorizationUI.h"
+#import "LTxLoginSmsValidateViewController.h"
 
 @interface LTxLoginSmsValidateViewController ()<UITextFieldDelegate>
 
@@ -135,7 +135,11 @@
  * 短信验证
  **/
 -(void)ltx_smsValidateAction{
-    
+    [self ltx_hideKeyboard];
+    //删除空格
+    NSString* phone = [self.phoneTF.text ltx_trimmingWhitespace];
+    NSString* smsCode = [self.smsTF.text ltx_trimmingWhitespace];
+    [self ltx_smsValidateWithPhone:phone smsCode:smsCode];
 }
 
 /**

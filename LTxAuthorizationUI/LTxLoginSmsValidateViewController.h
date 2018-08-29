@@ -6,16 +6,7 @@
 //
 
 #import <LTxCore/LTxCore.h>
-
-
-//短信验证类别。
-typedef NS_ENUM(NSUInteger, LTxLoginSMSValidateType) {
-    LTxLoginSMSValidateTypeDefault,
-    LTxLoginSMSValidateTypeQuickLogin,                // 快速登录
-    LTxLoginSMSValidateTypeForgetPassword,            // 忘记密码
-    
-};
-
+#import "LTxAuthorizationUI.h"
 /**
  * 短信验证
  * --------------------

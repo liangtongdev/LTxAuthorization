@@ -33,12 +33,19 @@
                       /*用户基本信息*/
                       USERDEFAULT_USER_LOGIN_NAME,
                       USERDEFAULT_USER_LOGIN_PASSWORD,
+                      USERDEFAULT_USER_ID,
                       USERDEFAULT_USER_NUMBER,
                       USERDEFAULT_USER_NAME,
+                      USERDEFAULT_USER_NICKNAME,
+                      USERDEFAULT_USER_AVATAR_IMAGE,
+                      USERDEFAULT_USER_SEX,
+                      USERDEFAULT_USER_DEPARTMENT,
+                      USERDEFAULT_USER_PHONE_NUMBER,
                       /*HOST*/
                       USERDEFAULT_APP_UPDATE_HOST,
                       USERDEFAULT_APP_MSG_HOST,
-                      USERDEFAULT_APP_SERVICE_HOST
+                      USERDEFAULT_APP_SERVICE_HOST,
+                      USERDEFAULT_APP_SHARE_HOST
                       ];
     for (NSString* key in keys) {
         [accountDefaults removeObjectForKey:key];

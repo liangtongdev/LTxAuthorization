@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "18A5554D2D8D27F36A9F22C22A8F49F4"
+               BlueprintIdentifier = "BD909D621DA9E508C7B7B671E7AC0E7D"
                BlueprintName = "LTxAuthorizationSippr"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "LTxAuthorizationSippr.framework">

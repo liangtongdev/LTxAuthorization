@@ -12,4 +12,6 @@ target 'LTxAuthorizationDemo' do
     
     pod 'LTxAuthorizationSippr', :path => '../'
     
+    pod 'LTxEepMSippr', :git => 'https://github.com/liangtongdev/LTxEepMSippr.git'
+    
 end

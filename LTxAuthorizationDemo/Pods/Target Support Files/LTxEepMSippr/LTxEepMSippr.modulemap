@@ -1,0 +1,6 @@
+framework module LTxEepMSippr {
+  umbrella header "LTxEepMSippr-umbrella.h"
+
+  export *
+  module * { export * }
+}
