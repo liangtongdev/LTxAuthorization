@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name         = "LTxAuthorizationSippr"
-    s.version      = "0.0.1"
-    s.summary      = "通用用户登录页面（功能）. "
+    s.version      = "0.0.2"
+    s.summary      = "授权定制功能. "
     s.license      = "MIT"
     s.author             = { "liangtong" => "liangtongdev@163.com" }
     

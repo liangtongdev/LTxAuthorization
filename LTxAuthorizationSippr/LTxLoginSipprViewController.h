@@ -5,7 +5,7 @@
 //  Created by liangtong on 2018/8/28.
 //
 
-#import "LTxAuthorizationUI.h"
+#import <LTxAuthorizationUI/LTxAuthorizationUI.h>
 
 @interface LTxLoginSipprViewController : LTxLoginViewController
 
