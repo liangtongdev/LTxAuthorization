@@ -1,4 +1,4 @@
-### cocoapods
+### Cocoapods
 
 ```Objective-C
     # 共通UI
@@ -11,6 +11,12 @@
     pod "LTxAuthorizationSippr"
 
 ```
+
+### Todo
+
+ + 注册
+ + 
+
 ### 界面展示
 
 #### 共通UI-登录
