@@ -1,0 +1,6 @@
+framework module LTxAuthorizationSippr {
+  umbrella header "LTxAuthorizationSippr-umbrella.h"
+
+  export *
+  module * { export * }
+}

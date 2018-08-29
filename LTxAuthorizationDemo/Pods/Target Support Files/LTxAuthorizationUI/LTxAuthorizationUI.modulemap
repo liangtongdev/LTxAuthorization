@@ -1,0 +1,6 @@
+framework module LTxAuthorizationUI {
+  umbrella header "LTxAuthorizationUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
