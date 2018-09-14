@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIButton* loginBtn;
 @property (nonatomic, strong) UIButton* forgetBtn;
 @property (nonatomic, strong) UIButton* quickLoginBtn;
+@property (nonatomic, strong) UIButton* registerBtn;//新访客注册
 @property (nonatomic, strong) UILabel* tipL;
 
 @end
@@ -67,6 +68,9 @@
     
     //快速登录
     [_quickLoginBtn addTarget:self action:@selector(ltx_quickLoginAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    //新访客注册
+    [_registerBtn addTarget:self action:@selector(ltx_registerAction) forControlEvents:UIControlEventTouchUpInside];
     
 }
 
@@ -126,6 +130,14 @@
 }
 
 /**
+ * 新访客注册
+ **/
+-(void)ltx_registerAction{
+    [self ltx_hideKeyboard];
+    
+}
+
+/**
  * 短信验证页面
  **/
 -(void)ltx_showSmsValidateWithType:(LTxLoginSMSValidateType)smsType{
@@ -157,6 +169,9 @@
     }
     if (!self.hideQuickLoginBtn) {
         [self.view addSubview:self.quickLoginBtn];
+    }
+    if (!self.hideRegisterBtn) {
+        [self.view addSubview:self.registerBtn];
     }
     
     [self.view addSubview:self.tipL];
@@ -233,6 +248,15 @@
         NSLayoutConstraint* quickLoginTop = [NSLayoutConstraint constraintWithItem:_quickLoginBtn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_forgetBtn attribute:NSLayoutAttributeBottom multiplier:1.f constant:LTX_LOGIN_PADDING * 1.5];
         NSLayoutConstraint* quickLoginHeight = [NSLayoutConstraint constraintWithItem:_quickLoginBtn attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:44.f];
         [NSLayoutConstraint activateConstraints:@[quickLoginLeading,quickLoginTrailing,quickLoginTop,quickLoginHeight]];
+    }
+    
+    //registerBtn
+    if (_registerBtn) {
+        NSLayoutConstraint* registerLeading = [NSLayoutConstraint constraintWithItem:_registerBtn attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:_topView attribute:NSLayoutAttributeLeading multiplier:1.f constant:0];
+        NSLayoutConstraint* registerTrailing = [NSLayoutConstraint constraintWithItem:_registerBtn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:_topView attribute:NSLayoutAttributeTrailing multiplier:1.f constant:0];
+        NSLayoutConstraint* registerTop = [NSLayoutConstraint constraintWithItem:_registerBtn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_quickLoginBtn attribute:NSLayoutAttributeBottom multiplier:1.f constant:LTX_LOGIN_PADDING * 1.5];
+        NSLayoutConstraint* registerHeight = [NSLayoutConstraint constraintWithItem:_registerBtn attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:44.f];
+        [NSLayoutConstraint activateConstraints:@[registerLeading,registerTrailing,registerTop,registerHeight]];
     }
     
     //tip
@@ -334,6 +358,18 @@
         _quickLoginBtn.layer.masksToBounds = YES;
     }
     return _quickLoginBtn;
+}
+-(UIButton*)registerBtn{
+    if (!_registerBtn) {
+        _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _registerBtn.translatesAutoresizingMaskIntoConstraints = NO;
+        [_registerBtn setTitle:LTxLocalizedString(@"text_auth_sms_login_register") forState:UIControlStateNormal];
+        [_registerBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:17]];
+        _registerBtn.backgroundColor = [LTxCoreConfig sharedInstance].hintColor;
+        _registerBtn.layer.cornerRadius = 5.f;
+        _registerBtn.layer.masksToBounds = YES;
+    }
+    return _registerBtn;
 }
 -(UILabel*)tipL{
     if (!_tipL) {

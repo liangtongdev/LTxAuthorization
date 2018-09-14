@@ -15,6 +15,7 @@
 
 @property (nonatomic, assign) BOOL hideForgetBtn;
 @property (nonatomic, assign) BOOL hideQuickLoginBtn;
+@property (nonatomic, assign) BOOL hideRegisterBtn;
 
 /**
  * 用户登录
@@ -27,5 +28,8 @@
  **/
 -(void)ltx_showSmsValidateWithType:(LTxLoginSMSValidateType)smsType;
 
-
+/**
+ * 新访客注册
+ **/
+-(void)ltx_registerAction;
 @end
