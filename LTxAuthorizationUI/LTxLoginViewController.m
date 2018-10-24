@@ -377,7 +377,7 @@
         _tipL.translatesAutoresizingMaskIntoConstraints = NO;
         _tipL.textAlignment = NSTextAlignmentCenter;
         _tipL.numberOfLines = 0;
-        _tipL.text = @"友情提示：\n 须经项目管理方授权后方可登录！";
+        _tipL.text = [LTxCoreConfig sharedInstance].loginTip;
     }
     return _tipL;
 }
