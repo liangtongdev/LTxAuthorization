@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "LTxAuthorizationUI"
-    s.version      = "0.0.3"
+    s.version      = "0.0.4"
     s.summary      = "通用用户授权页面. "
     s.license      = "MIT"
     s.author             = { "liangtong" => "liangtongdev@163.com" }
