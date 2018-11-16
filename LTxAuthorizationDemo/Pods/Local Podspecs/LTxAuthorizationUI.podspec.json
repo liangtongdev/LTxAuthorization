@@ -1,6 +1,6 @@
 {
   "name": "LTxAuthorizationUI",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "summary": "通用用户授权页面.",
   "license": "MIT",
   "authors": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/liangtongdev/LTxAuthorization.git",
-    "tag": "0.0.1",
+    "tag": "0.0.4",
     "submodules": true
   },
   "dependencies": {

@@ -9,6 +9,8 @@
 #import <LTxCore/LTxCore.h>
 
 
+//在修改密码和获取服务地址之后的回调中，需要做一些额外操作。比如存储和更新存储 密码，各种服务地址
+
 typedef void (^LTxAuthorizationCallbackBlock)(BOOL, NSString*, NSDictionary*);
 
 
@@ -29,11 +31,11 @@ typedef void (^LTxAuthorizationCallbackBlock)(BOOL, NSString*, NSDictionary*);
  *@brief 修改登录密码
  */
 ///#end
-+(void)changePasswordWithNewPassword:(NSString*)newPassword complete:(LTxStringCallbackBlock)complete;
++(void)changePasswordWithOldPassword:(NSString*)oldPassword newPassword:(NSString*)newPassword complete:(LTxStringCallbackBlock)complete;
 
 /**
  * @brief 获取服务地址
  **/
-+(void)appHostFetchComplete:(LTxStringCallbackBlock)complete;
++(void)appHostFetchComplete:(LTxStringAndArrayCallbackBlock)complete;
 
 @end

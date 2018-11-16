@@ -133,6 +133,7 @@
                     
                     _filePath = [NSURL fileURLWithPath:oldFilePath];
                     [self setupPreviewViewContent];
+                    [self hideAnimatingActivityView];
                     return;
                 }
             }
@@ -263,7 +264,6 @@
 }
 
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error{
-    self.errorTips = @"无法加载！";
     self.emptyScrollView = self.webView.scrollView;
 }
 

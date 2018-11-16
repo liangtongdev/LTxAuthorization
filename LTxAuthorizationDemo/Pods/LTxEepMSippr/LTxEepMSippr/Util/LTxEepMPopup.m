@@ -14,7 +14,7 @@
  * 导航栏上弹出提示框
  ***/
 +(void)showToast:(NSString*)message{
-    [LTxEepMPopup showToast:nil title:nil message:message autoDimiss:YES show:nil tap:nil dismiss:nil];
+    [LTxEepMPopup showToast:[UIImage imageNamed:@"ic_toast_info"] title:message message:nil autoDimiss:YES show:nil tap:nil dismiss:nil];
 }
 
 +(void)showToast:(NSString*)title message:(NSString*)message{
@@ -31,13 +31,15 @@
 
 +(void)showToast:(UIImage*)image title:(NSString*)title message:(NSString*)message autoDimiss:(BOOL)autoDismiss show:(LTxPopupCallback)show tap:(LTxPopupCallback)tap dismiss:(LTxPopupCallback)dismiss{
     LTxPopupToastConfiguration* configuration = [LTxPopupToastConfiguration defaultConfiguration];
+    configuration.showDuration = 3.f;
+    configuration.showAnimateDuration = 0.3f;
     configuration.image = image;
     configuration.title = title;
     configuration.message = message;
     configuration.autoDismiss = autoDismiss;
     
     if (!title) {
-        configuration.messageFontSize = 15.f;
+        configuration.messageFontSize = 17.f;
     }
     
     configuration.backgroundColor = [LTxCoreConfig sharedInstance].hintColor;

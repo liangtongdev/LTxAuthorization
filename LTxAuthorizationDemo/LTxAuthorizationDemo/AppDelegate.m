@@ -19,6 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[LTxCoreConfig sharedInstance] appSetup];
+    [LTxCoreConfig sharedInstance].messageHost = @"http://125.46.29.147:8803/eepj-push";
+    
     return YES;
 }
 

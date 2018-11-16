@@ -17,8 +17,8 @@
                       complete:(LTxStringCallbackBlock)complete{
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"feedbackUserNumber"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"feedbackUserNumber"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -49,8 +49,8 @@
 +(void)appUpdateCheckComplete:(LTxSettingForSipprUpdateCallback)complete{
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userNumber"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userNumber"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -88,8 +88,8 @@
 +(void)appUpdateHistoryFetchComplete:(LTxStringAndArrayCallbackBlock)complete{
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userNumber"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userNumber"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];

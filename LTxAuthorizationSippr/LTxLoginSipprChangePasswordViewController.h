@@ -6,7 +6,6 @@
 //
 
 #import "LTxAuthorizationSippr.h"
-
 @interface LTxLoginSipprChangePasswordViewController : LTxLoginChangePasswordViewController
 
 @end

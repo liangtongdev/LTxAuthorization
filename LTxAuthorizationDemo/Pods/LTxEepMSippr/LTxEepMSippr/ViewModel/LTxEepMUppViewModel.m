@@ -14,8 +14,8 @@
 +(void)pushTypeListFetchComplete:(LTxStringAndArrayCallbackBlock)complete{
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userNumber"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userNumber"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -48,8 +48,8 @@
     }
     //配置信息
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userNumber"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userNumber"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -71,8 +71,8 @@
 +(void)msgTypeOverviewListFetchComplete:(LTxStringAndArrayCallbackBlock)complete{
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userRowGuid"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userRowGuid"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -104,8 +104,8 @@
     }
     //配置信息
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userRowGuid"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userRowGuid"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -126,8 +126,8 @@
 +(void)msgListFetchWithMsgType:(NSString*)messageType currentPage:(NSInteger)currentPage maxResult:(NSInteger)maxResult complete:(LTxStringAndArrayCallbackBlock)complete{
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userRowGuid"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userRowGuid"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -166,8 +166,8 @@
 +(void)msgDetailWithMsgId:(NSString*)messageId userNumber:(NSString*)userNumber complete:(LTxStringAndDictionaryCallbackBlock)complete{
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userRowGuid"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userRowGuid"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -204,8 +204,8 @@
     }
     //配置信息
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userRowGuid"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userRowGuid"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -231,8 +231,8 @@
     }
     //配置信息
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userRowGuid"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userRowGuid"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -258,8 +258,8 @@
     }
     //配置信息
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userRowGuid"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userRowGuid"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -280,8 +280,8 @@
 +(void)msgDetailWithMsgRowGuid:(NSString*)messageRowGuid complete:(LTxStringAndDictionaryCallbackBlock)complete{
     NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
     LTxCoreConfig* config = [LTxCoreConfig sharedInstance];
-    if (config.userId) {
-        [params setObject:config.userId forKey:@"userRowGuid"];
+    if (config.userNumber) {
+        [params setObject:config.userNumber forKey:@"userRowGuid"];
     }
     if (config.appId) {
         [params setObject:config.appId forKey:@"appId"];
@@ -342,11 +342,11 @@
     if (deviceCode) {
         [params setObject:deviceCode forKey:@"deviceCode"];
     }
-    [params setObject:@"iOS" forKey:@"platform"];
+    [params setObject:@"ios" forKey:@"platform"];
     [params setObject:[NSNumber numberWithInteger:operateType] forKey:@"operateType"];
     NSString* url = [NSString stringWithFormat:@"%@/v1/api/mobile/sms/send",config.messageHost];
     //网络访问
-    [LTxCoreHttpService doGetWithURL:url param:params complete:^(NSString *errorTips, id data) {
+    [LTxCoreHttpService doPostWithURL:url param:params complete:^(NSString *errorTips, id data) {
         if (complete) {
             complete( errorTips);
         }
@@ -371,7 +371,7 @@
     if (deviceCode) {
         [params setObject:deviceCode forKey:@"deviceCode"];
     }
-    [params setObject:@"iOS" forKey:@"platform"];
+    [params setObject:@"ios" forKey:@"platform"];
     NSString* url = [NSString stringWithFormat:@"%@/v1/api/mobile/sms/check",config.messageHost];
     //网络访问
     [LTxCoreHttpService doPostWithURL:url param:params complete:^(NSString *errorTips, id data) {

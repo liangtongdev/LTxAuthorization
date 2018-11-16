@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6A050D3761A66648D36D20E6B6C305E5"
+               BlueprintIdentifier = "1658D9653D9C54243958E13E0A50FE00"
                BlueprintName = "LTxEepMSippr"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "LTxEepMSippr.framework">

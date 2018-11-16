@@ -42,13 +42,21 @@
 -(void)ltx_smsValidateWithPhone:(NSString*)phone smsCode:(NSString*)smsCode{
     __weak __typeof(self) weakSelf = self;
     [self showAnimatingActivityView];
-    [LTxEepMUppViewModel validateSmsCode:phone authCode:smsCode complete:^(NSString *errorTips) {
+    [[LTxSipprAppViewModel sharedInstance] userLoginWithPhone:phone smsCode:smsCode complete:^(NSString *errorTips) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         [strongSelf hideAnimatingActivityView];
         if(errorTips){
             [LTxEepMPopup showToast:errorTips];
         }else{
             //验证成功 - hook：根据短信类别进行后续操作
+            if (strongSelf.smsType == LTxLoginSMSValidateTypeQuickLogin) {
+                [[LTxSipprAppViewModel sharedInstance] showMainViewAction];
+            }else if (strongSelf.smsType == LTxLoginSMSValidateTypeForgetPassword) {
+                LTxLoginSipprChangePasswordViewController* changePsdVC = [[LTxLoginSipprChangePasswordViewController alloc] init];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [strongSelf.navigationController pushViewController:changePsdVC animated:true];
+                });
+            }
         }
     }];
 }

@@ -185,7 +185,7 @@
      * 用户名/密码
      **/
     NSLayoutConstraint* topLeading = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.f constant:40];
-    NSLayoutConstraint* topTop = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.f constant:60];
+    NSLayoutConstraint* topTop = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.f constant:60];
     NSLayoutConstraint* topTrailing = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.f constant:-40];
     [NSLayoutConstraint activateConstraints:@[topLeading,topTop,topTrailing]];
     

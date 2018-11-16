@@ -24,18 +24,16 @@
 	<key>debug</key>
 	<dict>
 		<key>host</key>
-		<string>http://125.46.29.147:8852/eepj-base-login</string>
+		<string>http://125.46.29.147:8802/eepj-base-login</string>
 		<key>instalUrl</key>
-		<string>http://192.168.1.75:8801/eepm/zj</string>
+		<string>http://192.168.1.75:8801/eepm/</string>
 	</dict>
-	<key>uat</key>
-	<dict/>
 	<key>release</key>
 	<dict>
 		<key>instalUrl</key>
-		<string>http://121.40.49.148/eepm/zj</string>
+		<string>-</string>
 		<key>host</key>
-		<string>http://121.40.49.148:9061</string>
+		<string>-</string>
 	</dict>
 </dict>
 </plist>

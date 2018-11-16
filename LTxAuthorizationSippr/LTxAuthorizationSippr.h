@@ -25,11 +25,6 @@
 #import "LTxLoginSipprSmsValidateViewController.h"
 #import "LTxLoginSipprChangePasswordViewController.h"
 
-
-/***
- * 预加载界面
- **/
-#import "LTxAppPreloadingViewController.h"
-
+#import "LTxSipprAppViewModel.h"
 
 #endif /* LTxLoginSippr_h */

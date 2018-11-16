@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "LTxCoreMacroDef.h"
-#import "NSUserDefaults+LTxCore.h"
+#import <LTxCategories/LTxCategories.h>
 /**
  * 配置文件
  * 默认从工程Bundle中读取LTxCoreConfig.plist文件
@@ -52,13 +52,15 @@
 #pragma mark - 系统配置
 @property (nonatomic, strong) NSString* appId;
 @property (nonatomic, strong) NSString* pushId;
-@property (nonatomic, strong) NSString* userId;
+@property (nonatomic, strong) NSNumber* userId;
+@property (nonatomic, strong) NSString* userNumber;
 @property (nonatomic, assign) NSInteger pageSize;
 
 #pragma mark - 其他
 @property (nonatomic, strong) NSString* instalUrl;
 @property (nonatomic, strong) NSString* instalTip;
 @property (nonatomic, strong) NSString* aboutTip;
+@property (nonatomic, strong) NSString* loginTip;
 @property (nonatomic, assign) BOOL cameraAlbumCustom;// 保存相片/视频时，是否使用自定义相册
 
 #pragma mark - 网络

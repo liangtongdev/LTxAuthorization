@@ -38,7 +38,7 @@
     }else if ([cell.reuseIdentifier isEqualToString:@"eep-login"]) {
         nextVC = [[LTxLoginSipprViewController alloc] init];
     }else if ([cell.reuseIdentifier isEqualToString:@"eep-preloading"]) {
-        nextVC = [[LTxAppPreloadingViewController alloc] init];
+        
     }
     if (nextVC) {
         dispatch_async(dispatch_get_main_queue(), ^{

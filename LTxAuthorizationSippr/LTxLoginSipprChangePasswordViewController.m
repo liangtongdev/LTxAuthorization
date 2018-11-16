@@ -24,13 +24,13 @@
 -(void)ltx_changePasswordWithNewPassword:(NSString*)newPassword{
     __weak __typeof(self) weakSelf = self;
     [self showAnimatingActivityView];
-    [LTxEepMBaseViewModel changePasswordWithNewPassword:newPassword complete:^(NSString *errorTips) {
+    [[LTxSipprAppViewModel sharedInstance] userChangePassword:newPassword complete:^(NSString *errorTips) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         [strongSelf hideAnimatingActivityView];
         if(errorTips){
             [LTxEepMPopup showToast:errorTips];
         }else{
-            //修改成功 - hook
+            [[LTxSipprAppViewModel sharedInstance] showMainViewAction];
         }
     }];
 }

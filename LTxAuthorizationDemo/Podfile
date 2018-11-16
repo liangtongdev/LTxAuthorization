@@ -9,9 +9,9 @@ target 'LTxAuthorizationDemo' do
     # Pods for LTxLoginDemo
 
     pod 'LTxAuthorizationUI', :path => '../'
-    
+
     pod 'LTxAuthorizationSippr', :path => '../'
     
-    pod 'LTxEepMSippr', :git => 'https://github.com/liangtongdev/LTxEepMSippr.git'
-    
+#    pod 'LTxEepMSippr', :git => 'https://github.com/liangtongdev/LTxEepMSippr.git'
+
 end
